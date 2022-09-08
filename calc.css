@@ -1,0 +1,51 @@
+.container{
+    width: 300px;
+    overflow: hidden;
+    margin: 150px auto;
+    border-radius: 30px;
+    border: 2px solid greenyellow;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50px repeat(5, 40px);
+    grid-template-areas: 'res res res res'
+                          'c div mult sous'
+                          '7 8 9 plus'
+                          '4 5 6 plus'
+                          '1 2 3 equal'
+                          'pour 0 virgule equal';
+}
+
+.container .resultant{
+    text-align: right;
+    padding: 1px 8px;
+    font-size: 1.6rem;
+    grid-area: res;
+}
+.container button{
+    color : #fff;
+    bottom: 0;
+    background: rgb(47, 68, 255);
+    border: 2px solid #fff;
+    border-radius: 20px;
+}
+
+.container button:nth-child(19){
+    grid-area: c;
+}
+.container button:nth-child(16){
+    grid-area: div;
+}
+.container button:nth-child(14){
+    grid-area: mult;
+}
+.container button:nth-child(15){
+    grid-area: sous;
+}
+
+.container button:nth-child(12){
+    grid-area: equal;
+}
+
+.container button:nth-child(13){
+    grid-area: plus;
+}
